@@ -217,7 +217,7 @@ public:
     EnableResponderCommand(wifi_interface_handle iface, int id, wifi_channel_info channel_hint,
             unsigned max_duration_seconds, wifi_rtt_responder *responderInfo)
             : WifiCommand("EnableResponderCommand", iface, 0), mChannelInfo(channel_hint),
-            m_max_duration_sec(max_duration_seconds), mResponderInfo(responderInfo)
+            mResponderInfo(responderInfo), m_max_duration_sec(max_duration_seconds)
     {
         memset(mResponderInfo, 0, sizeof(*mResponderInfo));
     }
